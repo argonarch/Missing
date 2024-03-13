@@ -20,7 +20,7 @@ public class App
 		Integer hourInvert = (timeNow.getHour() - 23)*-1;
 		Integer minuteInvert = (timeNow.getMinute() - 59)*-1;
 		Integer secondInvert = (timeNow.getSecond() - 60)*-1;
-		//String clockInvert = hourInvert.toString() + "-" + minuteInvert.toString() + "-" + secondInvert.toString();
+		String clockInvert = hourInvert.toString() + ":" + minuteInvert.toString() + ":" + secondInvert.toString();
 		
 
 		LocalDate locaDeteNow = LocalDate.now();
@@ -30,7 +30,7 @@ public class App
 		Integer yearInvert = p.getYears();
 		Integer monthInvert = p.getMonths();
 		Integer dayInvert = p.getDays();
-		//String dateInvert = yearInvert.toString() + "-" + monthInvert.toString() + "-" + dayInvert.toString();
+		String dateInvert = "Y:" + yearInvert.toString() + " M:" + monthInvert.toString() + " D:" + dayInvert.toString();
 		
 
 		
@@ -42,8 +42,7 @@ public class App
 		resultList.add(minuteInvert);
 		resultList.add(secondInvert);
 
-		//String result = dateInvert + "   " + clockInvert;
-		//System.out.println(result);
-		System.out.println(resultList);
+		String result = dateInvert + "  " + clockInvert;
+		System.out.println(result);
 	}
 }
