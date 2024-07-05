@@ -6,16 +6,16 @@
 
   <groupId>com.argonarch.app</groupId>
   <artifactId>missing_time</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
-  <name>missing_time</name>
+  <name>Missing_Time</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>16</maven.compiler.source>
+    <maven.compiler.target>16</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -45,10 +45,17 @@
           <version>3.8.0</version>
         </plugin>
         <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-					<version>2.22.1</version>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.8.0</version>
 					<configuration>
-			      <mainClass>com.argonarch.app.App</mainClass>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <classpathPrefix>lib/</classpathPrefix>
+			          <mainClass>com.argonarch.app.App</mainClass>
+              </manifest>
+            </archive>
           </configuration>
         </plugin>
         <plugin>
